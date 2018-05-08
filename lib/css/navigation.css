@@ -20,7 +20,7 @@ ul.menu li {
   list-style: none;
   margin: 0;
   padding: 0;
-  menu--vertical-align: top;
+  vertical-align: top;
 }
 
 ul.menu.menu--vertical li {
