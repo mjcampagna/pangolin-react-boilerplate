@@ -323,20 +323,20 @@ body[data-layout~="3col"][data-layout~="split"] .column--side.columnR {
   }
 
   .animate-columns .spine {
-    transition-duration: 400ms;
+    transition-duration: 300ms;
     transition-property: transform;
     transition-timing-function: ease-out;
   }
 
   .animate-columns .column--side {
-    transition-duration: 400ms;
+    transition-duration: 300ms;
     transition-property: all;
     transition-timing-function: ease-out;
   }
 
   .animate-columns .pageOverlay {
-    transition-delay: 300ms;
-    transition-duration: 400ms;
+    transition-delay: 200ms;
+    transition-duration: 300ms;
     transition-property: opacity;
     transition-timing-function: ease-in-out; 
   }
@@ -474,7 +474,6 @@ body.block-scroll {
   overflow: visible;
   position: absolute; top: 0; left: 0;
   width: 100%;
-  z-index: 2;
 }
 
 .toggleColumnButtons > .toggleColumnButtons__inner {
@@ -553,6 +552,12 @@ body[data-layout~="3col"] .toggleColumnButtons label[for="columnL"] {
 
 .toggleColumnButtons label span span:nth-child(4) {
 	top: 14px;
+}
+
+#columnL:checked ~ .pageBody .toggleColumnButtons label span span,
+#columnR:checked ~ .pageBody .toggleColumnButtons label span span 
+{
+  background-color: #ffffff;
 }
 
 #columnL:checked ~ .pageBody .toggleColumnButtons label[for="columnL"] span span:nth-child(1),
