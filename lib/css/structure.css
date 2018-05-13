@@ -323,20 +323,20 @@ body[data-layout~="3col"][data-layout~="split"] .column--side.columnR {
   }
 
   .animate-columns .spine {
-    transition-duration: 300ms;
+    transition-duration: 400ms;
     transition-property: transform;
     transition-timing-function: ease-out;
   }
 
   .animate-columns .column--side {
-    transition-duration: 300ms;
+    transition-duration: 400ms;
     transition-property: all;
     transition-timing-function: ease-out;
   }
 
   .animate-columns .pageOverlay {
-    transition-delay: 200ms;
-    transition-duration: 300ms;
+    transition-delay: 300ms;
+    transition-duration: 400ms;
     transition-property: opacity;
     transition-timing-function: ease-in-out; 
   }
@@ -513,4 +513,78 @@ body[data-layout~="3col"] .toggleColumnButtons label[for="columnL"] {
   body[data-layout~="0col"] .toggleColumnButtons {
     display: none;
   }
+}
+
+/* ---- */
+
+.toggleColumnButtons label > span {
+  display: block;
+  margin: 0 auto;
+  position: relative; top: 14px;
+	width: 22px; height: 16px;
+}
+
+.toggleColumnButtons label span span {
+  background-color: #191919;
+	border-radius: 3px;
+	display: block;
+	height: 2px;
+	margin: 0;
+	opacity: 1;
+  position: absolute; left: 0;
+  width: 100%;
+	-webkit-transform: rotate(0deg);
+	   -moz-transform: rotate(0deg);
+	     -o-transform: rotate(0deg);
+	        transform: rotate(0deg);
+	-webkit-transition: .2s ease-in-out;
+	   -moz-transition: .2s ease-in-out;
+	     -o-transition: .2s ease-in-out;
+	        transition: .2s ease-in-out;
+}
+
+.toggleColumnButtons label span span:nth-child(1) {
+	top: 0px;
+}
+
+.toggleColumnButtons label span span:nth-child(2), .toggleColumnButtons label span span:nth-child(3) {
+	top: 7px;
+}
+
+.toggleColumnButtons label span span:nth-child(4) {
+	top: 14px;
+}
+
+#columnL:checked ~ .pageBody .toggleColumnButtons label[for="columnL"] span span:nth-child(1),
+#columnR:checked ~ .pageBody .toggleColumnButtons label[for="columnR"] span span:nth-child(1)
+{
+	left: 50%;
+	top: 8px;
+	width: 0%;
+}
+
+#columnL:checked ~ .pageBody .toggleColumnButtons label[for="columnL"] span span:nth-child(2),
+#columnR:checked ~ .pageBody .toggleColumnButtons label[for="columnR"] span span:nth-child(2)
+{
+	-webkit-transform: rotate(45deg);
+	   -moz-transform: rotate(45deg);
+	     -o-transform: rotate(45deg);
+	        transform: rotate(45deg);
+}
+
+#columnL:checked ~ .pageBody .toggleColumnButtons label[for="columnL"] span span:nth-child(3),
+#columnR:checked ~ .pageBody .toggleColumnButtons label[for="columnR"] span span:nth-child(3)
+{
+	-webkit-transform: rotate(-45deg);
+	   -moz-transform: rotate(-45deg);
+	     -o-transform: rotate(-45deg);
+	        transform: rotate(-45deg);
+}
+
+#columnL:checked ~ .pageBody .toggleColumnButtons label[for="columnL"] span span:nth-child(4),
+#columnR:checked ~ .pageBody .toggleColumnButtons label[for="columnR"] span span:nth-child(4)
+{
+	left: 50%;
+	top:  8px;
+	width: 0%;
 }
