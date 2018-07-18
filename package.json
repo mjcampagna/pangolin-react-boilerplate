@@ -1,0 +1,37 @@
+{
+  "name": "pangolin-react-boilerplate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "build": "webpack --mode=production",
+    "dev": "webpack --mode=development --watch",
+    "start": "echo \"Error: no start specified\" && exit 1",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mjcampagna/pangolin-react-boilerplate.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mjcampagna/pangolin-react-boilerplate/issues"
+  },
+  "homepage": "https://github.com/mjcampagna/pangolin-react-boilerplate#readme",
+  "devDependencies": {
+    "clean-webpack-plugin": "^0.1.19",
+    "css-loader": "^1.0.0",
+    "file-loader": "^1.1.11",
+    "html-webpack-plugin": "^3.2.0",
+    "style-loader": "^0.21.0",
+    "webpack": "^4.16.1",
+    "webpack-cli": "^3.1.0"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.0"
+  }
+}
