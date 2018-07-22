@@ -7,13 +7,13 @@ html {
 
 /* ---- */
 
-@font-face {
+/* @font-face {
   font-display: swap;
   font-family: "Marvin Visions";
   src:url("../../lib/fonts/MarvinVisions-Bold.woff") format('woff'), 
       url("../../lib/fonts/MarvinVisions-Bold.woff2") format('woff2'),
       url("../../lib/fonts/MarvinVisions-Bold.eot") format('eot');
-}
+} */
 
 h1,
 h2,

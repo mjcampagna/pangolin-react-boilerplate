@@ -55,6 +55,7 @@ Pangolin.prototype.animateColumns = function() {
 }
 
 Pangolin.prototype.blockScroll = function( target ) {
+  console.log("I am on")
   if ( target.checked ) {
     document.body.classList.add('block-scroll');
   } else {
