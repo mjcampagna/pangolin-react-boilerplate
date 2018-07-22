@@ -1,21 +1,5 @@
 import React from 'react';
-
-// import Pangolin from '../../js/pangolin.js';
-
-function debounce(func, wait, immediate) {
-  var timeout;
-  return function() {
-    var context = this, args = arguments;
-    var later = function() {
-      timeout = null;
-      if (!immediate) func.apply(context, args);
-    };
-    var callNow = immediate && !timeout;
-    clearTimeout(timeout);
-    timeout = setTimeout(later, wait);
-    if (callNow) func.apply(context, args);
-  };
-};
+import debounce from 'lodash.debounce';
 
 import Header from './Header.jsx';
 import Main from './Main.jsx';
@@ -52,6 +36,7 @@ export default class Layout extends React.Component {
 	}
 
 	handleChangeOnToggleColumn(event) {
+    document.body.classList.toggle('overflow-hidden');
 		this.setState({
 			[event.target.id]: event.target.checked
 		})
