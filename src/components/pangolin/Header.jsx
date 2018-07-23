@@ -1,9 +1,11 @@
 import React from 'react';
 
+import HeaderContent from '../HeaderContent.jsx';
+
 export default function Header(props) {
 	return (
 		<header className="header spine">
-			<h1>Header</h1>
+			<HeaderContent />
 		</header>
 	);
 }
