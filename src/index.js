@@ -9,7 +9,7 @@ import './style.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import Layout from './components/pangolin/Pangolin.jsx';
+import Layout from './components/Pangolin';
 
 ReactDOM.render(
 	<Layout />,
