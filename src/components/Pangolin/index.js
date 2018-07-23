@@ -18,14 +18,18 @@ export default class Layout extends React.Component {
 		this.state = {
 			columnL: false,
 			columnR: false,
-			dataLayoutCol: '3col',
+			dataLayoutCol: '2col',
 			dataLayoutPos: 'split'
 		}
 
 	}
 
 	componentDidMount() {
-	
+		window.addEventListener( 'resize', debounce( () => {
+			this.animateColumns();
+		}, 250 ));
+		this.animateColumns();
+
 		window.addEventListener('scroll', (e) => {
 			if ( window.scrollY > 0 ) {
 				document.body.classList.add('is-scrolling');
@@ -33,12 +37,6 @@ export default class Layout extends React.Component {
 				document.body.classList.remove('is-scrolling');
 			}		
 		}, false);
-
-		window.addEventListener( 'resize', debounce( () => {
-			this.animateColumns();
-		}, 250 ));
-
-		this.animateColumns();
 	}
 
 	animateColumns() {
@@ -81,15 +79,23 @@ export default class Layout extends React.Component {
 									<Main />
 								</div>
 
-								<div className="column column--side columnL" id="column--side_columnL">
-									<ColumnL />
-								</div>
-								<label className="pageOverlay spine" htmlFor="columnL"></label>
+								{(this.state.dataLayoutCol === '2col' || this.state.dataLayoutCol === '3col') && 
+									<React.Fragment>
+										<div className="column column--side columnL" id="column--side_columnL">
+											<ColumnL />
+										</div>
+										<label className="pageOverlay spine" htmlFor="columnL"></label>
+									</React.Fragment>
+								}
 
-								<div className="column column--side columnR" id="column--side_columnR">
-									<ColumnR />
-								</div>
-								<label className="pageOverlay spine" htmlFor="columnR"></label>
+								{ this.state.dataLayoutCol === '3col' && 
+									<React.Fragment>
+										<div className="column column--side columnR" id="column--side_columnR">
+											<ColumnR />
+										</div>
+										<label className="pageOverlay spine" htmlFor="columnR"></label>
+									</React.Fragment>
+								}
 
 							</div>
 						</main>
