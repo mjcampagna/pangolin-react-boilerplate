@@ -1,19 +1,19 @@
 'use strict';
 
-function debounce(func, wait, immediate) {
-  var timeout;
-  return function() {
-    var context = this, args = arguments;
-    var later = function() {
-      timeout = null;
-      if (!immediate) func.apply(context, args);
-    };
-    var callNow = immediate && !timeout;
-    clearTimeout(timeout);
-    timeout = setTimeout(later, wait);
-    if (callNow) func.apply(context, args);
-  };
-};
+// function debounce(func, wait, immediate) {
+//   var timeout;
+//   return function() {
+//     var context = this, args = arguments;
+//     var later = function() {
+//       timeout = null;
+//       if (!immediate) func.apply(context, args);
+//     };
+//     var callNow = immediate && !timeout;
+//     clearTimeout(timeout);
+//     timeout = setTimeout(later, wait);
+//     if (callNow) func.apply(context, args);
+//   };
+// };
 
 const Utilities = function() {
   this.breakpoint = 992; // pixels
@@ -55,7 +55,6 @@ Pangolin.prototype.animateColumns = function() {
 }
 
 Pangolin.prototype.blockScroll = function( target ) {
-  console.log("I am on")
   if ( target.checked ) {
     document.body.classList.add('block-scroll');
   } else {

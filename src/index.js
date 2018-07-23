@@ -6,8 +6,6 @@ import './css/style.css';
 
 import './style.css';
 
-import './js/pangolin.js';
-
 import React from 'react';
 import ReactDOM from 'react-dom';
 
