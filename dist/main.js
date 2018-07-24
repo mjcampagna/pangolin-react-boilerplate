@@ -137,7 +137,7 @@ eval("exports = module.exports = __webpack_require__(/*! ../../node_modules/css-
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("exports = module.exports = __webpack_require__(/*! ../node_modules/css-loader/lib/css-base.js */ \"./node_modules/css-loader/lib/css-base.js\")(false);\n// imports\n\n\n// module\nexports.push([module.i, \"\", \"\"]);\n\n// exports\n\n\n//# sourceURL=webpack:///./src/style.css?./node_modules/css-loader");
+eval("exports = module.exports = __webpack_require__(/*! ../node_modules/css-loader/lib/css-base.js */ \"./node_modules/css-loader/lib/css-base.js\")(false);\n// imports\n\n\n// module\nexports.push([module.i, \".loading {\\n\\tanimation: loader-rotate .8s infinite linear;\\n\\tbackground: transparent;\\n\\tborder: 6px solid rgba(100, 100, 100, .5);\\n\\tborder-radius: 100%;\\n\\tborder-top-color: #fff;\\n\\theight: 60px;\\n\\tleft: 50%;\\n\\tmargin: -30px 0 0 -30px;\\n\\topacity: .6;\\n\\tpadding: 0;\\n\\tposition: absolute;\\n\\ttop: 50%;\\n\\twidth: 60px;\\n\\tz-index: 99999;\\n}\\n\\n@keyframes loader-rotate {\\n\\tfrom {\\n\\t\\ttransform: rotate(0deg);\\n\\t}\\n\\tto {\\n\\t\\ttransform: rotate(359deg);\\n\\t}\\n}\\n\", \"\"]);\n\n// exports\n\n\n//# sourceURL=webpack:///./src/style.css?./node_modules/css-loader");
 
 /***/ }),
 
