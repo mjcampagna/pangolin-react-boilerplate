@@ -19,6 +19,10 @@ body {
     to { padding: 0 } 
 }
 
+#pangolin {
+  height: 100%;
+}
+
 .page { /* Flexbox hack for IE */
   display: -webkit-box;
   display: -ms-flexbox;
