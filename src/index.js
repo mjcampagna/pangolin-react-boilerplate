@@ -15,4 +15,5 @@ ReactDOM.render(
 	<BrowserRouter>
 		<Pangolin />
 	</BrowserRouter>,
-document.getElementById('pangolin'));
+	document.getElementById('pangolin')
+);
