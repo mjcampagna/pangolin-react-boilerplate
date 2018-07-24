@@ -18,7 +18,7 @@ export default class Layout extends React.Component {
 		this.state = {
 			columnL: false,
 			columnR: false,
-			dataLayoutCol: '2col',
+			dataLayoutCol: '3col',
 			dataLayoutPos: 'split'
 		}
 
@@ -79,7 +79,7 @@ export default class Layout extends React.Component {
 									<Main />
 								</div>
 
-								{(this.state.dataLayoutCol === '2col' || this.state.dataLayoutCol === '3col') && 
+								{ this.state.dataLayoutCol !== '0col' && 
 									<React.Fragment>
 										<div className="column column--side columnL" id="column--side_columnL">
 											<ColumnL />
