@@ -7,10 +7,12 @@ import './css/style.css';
 
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter } from 'react-router-dom';
 
 import Pangolin from './components/Pangolin';
 
 ReactDOM.render(
-	<Pangolin />,
-	document.getElementById('pangolin')
-);
+	<BrowserRouter>
+		<Pangolin />
+	</BrowserRouter>,
+document.getElementById('pangolin'));
