@@ -5,8 +5,6 @@ const app = express();
 
 app.use( express.static( path.resolve(__dirname, '../dist') ) );
 
-app.use( '/*', express.static( path.resolve(__dirname, '../dist') ) );
-
 const port = process.env.PORT || 5600;
 app.listen(
 	port, console.log(`Listing on port ${port}...`));
