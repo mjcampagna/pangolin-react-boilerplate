@@ -35,6 +35,15 @@ export default function Main(props) {
 					)}
 				/>
 
+				<Route 
+					exact path='/about' 
+					render={(routeProps) => (
+						<React.Fragment>
+							<h2>About</h2>
+						</React.Fragment>
+					)}
+				/>
+
 			</Switch>
 		</React.Fragment>
 	);
