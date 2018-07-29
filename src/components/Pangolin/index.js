@@ -21,7 +21,8 @@ class Page extends React.Component {
 
     this.state = {
       columnL: false,
-      columnR: false
+      columnR: false,
+      location: null
     }
   }
 
@@ -38,6 +39,21 @@ class Page extends React.Component {
         document.body.classList.remove('is-scrolling');
       }		
     }, false);
+
+    this.setState({
+      location: this.props.location
+    });
+  }
+
+  componentDidUpdate() {
+    // Force-close the pallet menu on location change
+    if ( this.props.location.key !== this.state.location.key ) {
+      this.setState({
+        columnL: false,
+        columnR: false,
+        location: this.props.location
+      });
+    }
   }
 
   animateColumns() {
