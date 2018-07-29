@@ -48,6 +48,9 @@ class Page extends React.Component {
   componentDidUpdate() {
     // Force-close the pallet menu on location change
     if ( this.props.location.key !== this.state.location.key ) {
+      if ( document.body.classList.contains('overflow-hidden') ) {
+        document.body.classList.toggle('overflow-hidden');
+      }
       this.setState({
         columnL: false,
         columnR: false,
