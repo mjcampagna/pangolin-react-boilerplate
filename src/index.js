@@ -7,10 +7,6 @@ import './css/style.css';
 
 import React from 'react';
 import ReactDOM from 'react-dom';
+import App from './components/App.jsx';
 
-import Pangolin from './components/Pangolin';
-
-ReactDOM.render(
-	<Pangolin />,
-	document.getElementById('pangolin')
-);
+ReactDOM.render( <App />, document.getElementById('pangolin') );
