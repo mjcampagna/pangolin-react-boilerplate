@@ -1,23 +1,7 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
-import {
-	_0ColLeft,
-	_0ColRight,
-	_0ColSplit,
-	_1ColLeft,
-	_1ColRight,
-	_1ColSplit,
-	_2ColLeft,
-	_2ColRight,
-	_2ColSplit,
-	_3ColLeft,
-	_3ColRight,
-	_3ColSplit
-} from './Pangolin/actions.js';
-
-function Menu(props) {
+export default function Menu(props) {
 
 	const dispatch = action => {
 		props.dispatch( action );
@@ -26,14 +10,10 @@ function Menu(props) {
 	return (
 		<ul className={props.classes}>
 			<li className="menu-item">
-				<Link to="/" 
-					onClick={() => dispatch( _1ColRight() )} 
-				>Home</Link>
+				<Link to="/">Home</Link>
 			</li>
 			<li className="menu-item">
-				<Link to="/about" 
-					onClick={() => dispatch( _2ColRight() )} 
-				>About</Link>
+				<Link to="/about">About</Link>
 			</li>
 		</ul>
 
@@ -87,10 +67,3 @@ function Menu(props) {
 		// </ul>
 	);
 }
-
-const mapStateToProps = state => ({
-  dataLayoutCol: state.pangolin.dataLayoutCol,
-  dataLayoutPos: state.pangolin.dataLayoutPos
-});
-
-export default connect(mapStateToProps)(Menu);
