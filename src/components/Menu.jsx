@@ -1,11 +1,41 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom'
 import { Link } from 'react-router-dom';
 
-export default function Menu(props) {
+import {
+	_0ColLeft,
+	_0ColRight,
+	_0ColSplit,
+	_1ColLeft,
+	_1ColRight,
+	_1ColSplit,
+	_2ColLeft,
+	_2ColRight,
+	_2ColSplit,
+	_3ColLeft,
+	_3ColRight,
+	_3ColSplit
+} from '../actions.js';
+
+function Menu(props) {
+
+	const dispatch = action => {
+		props.dispatch( action );
+	};
+
 	return (
 		<ul className={props.classes}>
-			<li className="menu-item"><Link to="/">Home</Link></li>
-			<li className="menu-item"><Link to="/about">About</Link></li>
+			<li className="menu-item">
+				<Link to="/" 
+					onClick={() => dispatch( _1ColRight() )} 
+				>Home</Link>
+			</li>
+			<li className="menu-item">
+				<Link to="/about" 
+					onClick={() => dispatch( _2ColRight() )} 
+				>About</Link>
+			</li>
 		</ul>
 
 		// <ul className={props.classes}>
@@ -58,3 +88,10 @@ export default function Menu(props) {
 		// </ul>
 	);
 }
+
+const mapStateToProps = state => ({
+  dataLayoutCol: state.pangolin.dataLayoutCol,
+  dataLayoutPos: state.pangolin.dataLayoutPos
+});
+
+export default connect(mapStateToProps)(Menu);
