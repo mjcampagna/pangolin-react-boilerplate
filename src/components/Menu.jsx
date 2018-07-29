@@ -2,11 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 export default function Menu(props) {
-
-	const dispatch = action => {
-		props.dispatch( action );
-	};
-
 	return (
 		<ul className={props.classes}>
 			<li className="menu-item">
