@@ -17,7 +17,7 @@ class Page extends React.Component {
   constructor(props) {
     super(props);
 
-    this.breakpoint = 992;
+    this.breakpoint = 992; // should match your CSS breakpoint
 
     this.state = {
       columnL: false,

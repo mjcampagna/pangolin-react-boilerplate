@@ -1,6 +1,5 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { withRouter } from 'react-router-dom'
 import { Link } from 'react-router-dom';
 
 import {
@@ -16,7 +15,7 @@ import {
 	_3ColLeft,
 	_3ColRight,
 	_3ColSplit
-} from '../actions.js';
+} from './Pangolin/actions.js';
 
 function Menu(props) {
 
